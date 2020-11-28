@@ -1,0 +1,22 @@
+/*
+ Theme Name:   GeneratePress Reviews
+ Theme URI:    https://generatepress.com
+ Description:  Default GeneratePress child theme
+ Author:       Tom Usborne
+ Author URI:   https://tomusborne.com
+ Template:     generatepress
+ Version:      0.1
+*/
+
+/* Widgets */
+.widget-gdssh_networks_profiles .widget-title {
+    text-align: center;
+}
+/* Widgets */
+
+/* Breadcrumbs Styling */
+.gdcub-generatepress-wrapper {
+    background: #FFF;
+}
+/* Breadcrumbs Styling */
+
