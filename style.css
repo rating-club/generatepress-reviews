@@ -12,11 +12,143 @@
 .widget-gdssh_networks_profiles .widget-title {
     text-align: center;
 }
+
 /* Widgets */
+
+/* Additional Widgets Styling */
+.gdrts-rating-list ol li.gdrts-rating-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #DEDEDE;
+}
+
+/* Additional Widgets Styling */
 
 /* Breadcrumbs Styling */
 .gdcub-generatepress-wrapper {
     background: #FFF;
 }
+
 /* Breadcrumbs Styling */
 
+/* Rating Widgets */
+.gdrts-thumbnail-full-logo .gdrts-rating-item {
+    text-align: center;
+}
+
+/* Rating Widgets */
+
+/* Best Companies Templates */
+table.gdrts-best-companies th,
+table.gdrts-best-companies td {
+    padding: 1em 2em;
+    text-align: center;
+}
+
+.gdrts-best-companies .post-thumbnail {
+    margin: 0;
+}
+
+.gdrts-best-companies .post-thumbnail img {
+    width: auto;
+    height: 50px;
+}
+
+.gdrts-best-companies .gdrts-rating-block {
+    margin: 0;
+}
+
+.gdrts-by-user-reviews .users-rating {
+    background-color: #F8F8F8;
+}
+
+.gdrts-by-editor-review .editor-rating {
+    background-color: #F8F8F8;
+}
+
+.gdrts-best-companies .hosting-visit a {
+    text-decoration: none;
+    padding: 5px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #3872B8;
+    display: inline-block;
+    color: #FFF;
+}
+
+.gdrts-best-companies th {
+    display: none;
+}
+
+.gdrts-best-companies td {
+    display: block;
+}
+
+.gdrts-best-companies td > div {
+    display: inline-block;
+}
+
+.gdrts-best-companies td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+    width: 140px;
+}
+
+@media (max-width: 699px) {
+    .gdrts-best-companies td {
+        border-bottom: 0;
+    }
+
+    .gdrts-best-companies tbody tr:first-child {
+        border-top: solid 1px #E6E6E6;
+    }
+
+    .gdrts-best-companies tbody tr {
+        border-bottom: solid 1px #E6E6E6;
+    }
+}
+
+@media (min-width: 700px) {
+    .gdrts-best-companies th,
+    .gdrts-best-companies td {
+        display: table-cell;
+    }
+
+    .gdrts-best-companies td:before {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .gdrts-review-embed-reviews-wrapper {
+        float: none;
+        background: #DEEFFF;
+        width: auto;
+        padding: 15px;
+        text-align: center;
+        margin: 0 0 15px 0;
+    }
+
+    .gdrts-review-embed-wrapper .gdrts-the-company {
+        width: 50%;
+    }
+
+    .gdrts-review-embed-wrapper .gdrts-the-review {
+        width: 100%;
+    }
+
+    .gdrts-review-embed-wrapper .gdrts-the-proscons {
+        width: 50%;
+    }
+
+    .gdrts-review-embed-wrapper .gdrts-the-review .gdrts-embed-rating-block {
+        border-top: 2px solid #888;
+        border-left: 0;
+        padding: 1em 0 0;
+        margin: 1em 0 0;
+    }
+}
+
+/* Best Companies Templates */
