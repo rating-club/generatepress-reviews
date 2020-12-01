@@ -18,15 +18,3 @@ function gdrts__generate_do_template_part( $template, $post_type ) {
 
 	do_action( 'generate_after_do_template_part', $template, $post_type );
 }
-
-/** GeneratePress:
- * Enable entry meta block for 'product' post type.
- */
-add_filter( 'generate_entry_meta_post_types', 'gdrts__generate_entry_meta_post_types' );
-add_filter( 'generate_footer_meta_post_types', 'gdrts__generate_entry_meta_post_types' );
-function gdrts__generate_entry_meta_post_types( $types ) {
-	$types[] = 'host';
-	$types[] = 'registrar';
-
-	return $types;
-}

@@ -8,57 +8,74 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php generate_do_microdata( 'article' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'gdrts-post-type-archive' ); ?> <?php generate_do_microdata( 'article' ); ?>>
     <div class="inside-article">
-		<?php
+        <div class="featured-image">
+            <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail( 'medium', $attrs = array( 'itemprop' => 'image' ) ); ?></a>
+        </div>
+        <div class="product-ratings">
+			<?php
 
-		do_action( 'generate_before_content' );
+			$post_type = get_post()->post_type;
 
-		if ( generate_show_entry_header() ) :
-			?>
-            <header class="entry-header">
-				<?php
-
-				do_action( 'generate_before_entry_title' );
-
-				if ( generate_show_title() ) {
-					$params = generate_get_the_title_parameters();
-
-					the_title( $params['before'], $params['after'] );
-				}
-
-				do_action( 'generate_after_entry_title' );
-
-				?>
-            </header>
-		<?php
-
-		endif;
-
-		do_action( 'generate_after_entry_header' );
-
-		$itemprop = '';
-
-		if ( 'microdata' === generate_get_schema_type() ) {
-			$itemprop = ' itemprop="text"';
-		}
-
-		if ( generate_show_excerpt() ) :
 			?>
 
-            <div class="entry-summary"<?php echo $itemprop; // phpcs:ignore -- No escaping needed.
-			?>>
+            <h5>Editor Review Rating</h5>
+			<?php
+
+			gdrts_posts_render_rating(
+				array(
+					'echo'   => true,
+					'method' => 'multi-stars-review',
+					'series' => $post_type == 'host' ? 'hosting' : 'registrar'
+				),
+				array(
+					'template'   => 'overall',
+					'style_size' => 28
+				)
+			);
+
+			?>
+
+            <h5>Users Reviews Rating</h5>
+			<?php
+
+			gdrts_posts_render_rating(
+				array(
+					'echo'   => true,
+					'method' => 'multi-stars-rating',
+					'series' => $post_type == 'host' ? 'hosting' : 'registrar'
+				),
+				array(
+					'template'   => 'overall',
+					'style_size' => 28
+				)
+			);
+
+			?>
+        </div>
+        <div class="product-information">
+			<?php
+
+			$itemprop = '';
+
+			if ( 'microdata' === generate_get_schema_type() ) {
+				$itemprop = ' itemprop="text"';
+			}
+
+			?>
+
+            <div class="entry-summary"<?php echo $itemprop; // phpcs:ignore -- No escaping needed. ?>>
 				<?php the_excerpt(); ?>
             </div>
 
-		<?php
-		endif;
+			<?php
 
-		do_action( 'generate_after_entry_content' );
+			do_action( 'generate_after_content' );
 
-		do_action( 'generate_after_content' );
-
-		?>
+			?>
+        </div>
     </div>
 </article>

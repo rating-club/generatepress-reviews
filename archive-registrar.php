@@ -9,8 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// add_action( 'generate_after_entry_header', 'gdrts__display_thumbs_rating_block', 5 );
-
 add_filter( 'generate_page_header_default_size', 'gdrts__archive_thumbnail_size' );
 function gdrts__archive_thumbnail_size( $size ) {
 	$size = 'medium';
@@ -25,6 +23,11 @@ function gdrts__generate_blog_post_classes( $classes ) {
 	}
 
 	return $classes;
+}
+
+add_filter( 'excerpt_length', 'gdrts__custom_category_excerpt_length', 1000 );
+function gdrts__custom_category_excerpt_length( $length ) {
+	return 25;
 }
 
 get_header(); ?>

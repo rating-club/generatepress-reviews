@@ -153,6 +153,7 @@ table.gdrts-best-companies td {
 
 /* Best Companies Templates */
 
+/* Registrar Review Item */
 .gdrts-user-review-custom-layout.gdrts-user-review-wrapper .gdrts-user-review-content-proscons {
     margin: 0;
     padding: 0;
@@ -185,3 +186,69 @@ table.gdrts-best-companies td {
 .gdrts-user-review-custom-layout.gdrts-user-review-wrapper .gdrts-user-review-content .gdrts-user-review-rating .gdrts-multi-rating-element {
     margin: .35em 0;
 }
+
+/* Registrar Review Item */
+
+/* Product Archive Items */
+.gdrts-post-type-archive .inside-article {
+    display: flex;
+}
+
+.gdrts-post-type-archive .inside-article .featured-image {
+    margin: -40px !important;
+    padding: 40px 20px;
+    background: #E8E8E8;
+    text-align: center;
+    flex: 1 0 30%;
+}
+
+.gdrts-post-type-archive .inside-article .product-ratings {
+    margin: -40px 0 -40px 40px !important;
+    flex: 1 0 20%;
+    padding: 40px;
+    background: #F0F0F0;
+}
+
+.gdrts-post-type-archive .inside-article .product-ratings h5 {
+    margin: 0;
+    padding: 0;
+    font-size: .9em;
+    font-weight: bold;
+}
+
+.gdrts-post-type-archive .inside-article .product-ratings .gdrts-rating-block {
+    margin: 0;
+}
+
+.gdrts-post-type-archive .inside-article .product-ratings .gdrts-rating-block .gdrts-rating-text {
+    font-size: .9em;
+}
+
+.gdrts-post-type-archive .inside-article .product-information {
+    flex: 1 0 50%;
+    padding: 0 0 0 40px;
+}
+
+@media (max-width: 768px) {
+    .gdrts-post-type-archive .inside-article {
+        flex-wrap: wrap;
+    }
+
+    .gdrts-post-type-archive .inside-article .featured-image {
+        margin: -30px !important;
+        padding: 40px 20px;
+        flex: 1 0 50%;
+    }
+
+    .gdrts-post-type-archive .inside-article .product-ratings {
+        margin: -30px !important;
+        flex: 1 0 50%;
+    }
+
+    .gdrts-post-type-archive .inside-article .product-information {
+        flex: 1 0 100%;
+        margin: 60px 0 0;
+    }
+}
+
+/* Product Archive Items */
