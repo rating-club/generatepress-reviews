@@ -152,3 +152,36 @@ table.gdrts-best-companies td {
 }
 
 /* Best Companies Templates */
+
+.gdrts-user-review-custom-layout.gdrts-user-review-wrapper .gdrts-user-review-content-proscons {
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+    font-size: .9em;
+}
+
+.gdrts-user-review-custom-layout.gdrts-user-review-wrapper .gdrts-user-review-content-proscons h5 {
+    font-weight: bold;
+}
+
+.gdrts-user-review-custom-layout.gdrts-user-review-wrapper .gdrts-user-review-content-proscons ul {
+    line-height: 1.4;
+}
+
+.gdrts-user-review-custom-layout.gdrts-user-review-wrapper .gdrts-user-review-content-proscons .gdrts-user-review-cons h5 {
+    margin-top: 1em;
+}
+
+.gdrts-user-review-custom-layout.gdrts-user-review-wrapper .gdrts-wrapper-proscons-rating {
+    border-top: 2px solid #DDD;
+}
+
+.gdrts-user-review-custom-layout.gdrts-user-review-wrapper .gdrts-user-review-content .gdrts-user-review-rating {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.gdrts-user-review-custom-layout.gdrts-user-review-wrapper .gdrts-user-review-content .gdrts-user-review-rating .gdrts-multi-rating-element {
+    margin: .35em 0;
+}

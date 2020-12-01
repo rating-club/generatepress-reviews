@@ -22,8 +22,9 @@ get_header(); ?>
 
 					the_post();
 
-					get_template_part( 'content', 'page-best', array( 'gdrts-best-post-type'     => 'registrar',
-					                                                  'gdrts-best-rating-series' => 'registrar'
+					get_template_part( 'content', 'page-best', array(
+						'gdrts-best-post-type'     => 'registrar',
+						'gdrts-best-rating-series' => 'registrar'
 					) );
 
 				endwhile;

@@ -21,8 +21,9 @@ get_header(); ?>
 				while ( have_posts() ) :
 					the_post();
 
-					get_template_part( 'content', 'page-best', array( 'gdrts-best-post-type'     => 'host',
-					                                                  'gdrts-best-rating-series' => 'hosting'
+					get_template_part( 'content', 'page-best', array(
+						'gdrts-best-post-type'     => 'host',
+						'gdrts-best-rating-series' => 'hosting'
 					) );
 				endwhile;
 			}
