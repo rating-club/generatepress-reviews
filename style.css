@@ -31,6 +31,18 @@
 
 /* Breadcrumbs Styling */
 
+/* Extra Styling */
+.comment-body {
+    padding: 0;
+}
+
+.comment-content {
+    margin-top: 0;
+    border: 0;
+}
+
+/* Extra Styling */
+
 /* Rating Widgets */
 .gdrts-thumbnail-full-logo .gdrts-rating-item {
     text-align: center;
